@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import restaurant from "./restaurant.jpg";
 function Header(props) {
@@ -12,11 +13,8 @@ function Main(props) {
   return (
     <section>
       <p>
-        Here you will find all the delious food. Props are arguments passed into
-        React components. Props are passed to components via HTML attributes.
-        React Props React Props are like function arguments in JavaScript and
-        attributes in HTML. To send props into a component, use the same syntax
-        as HTML attributes:
+        We serve the most authentic, traditional Indian food, providing high
+        standards in service and quality.
       </p>
       <img src={restaurant} alt="Deepali's kitchen" />
       <ul style={{ textAlign: "left" }}>
@@ -36,6 +34,20 @@ function Footer(props) {
   );
 }
 
+function Review() {
+  const [review, setReview] = useState("Delious");
+  return (
+    <>
+      <h1>Food is {review}.</h1>
+      <button onClick={() => setReview("Amazing")}>Amazing</button>
+
+      <button onClick={() => setReview("Average")}>Average</button>
+
+      <button onClick={() => setReview("Nice")}>Nice</button>
+    </>
+  );
+}
+
 const dishes = ["Pav bhaji", "Anda Bhurji", "Omlet", "Bun Maska", "Fries"];
 const dishObjects = dishes.map((dish, i) => ({ id: i, title: dish }));
 
@@ -46,6 +58,7 @@ function App() {
     <div className="App">
       <Header name="Deepali" />
       <Main dishes={dishObjects} />
+      <Review />
       <Footer year={new Date().getFullYear()} />
     </div>
   );
