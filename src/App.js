@@ -13,8 +13,7 @@ function Main(props) {
   return (
     <section>
       <p>
-        “The world is a book and those who do not travel read only one page.” ~
-        Saint Augustine Kerala, God's Own Country, and one of the most-loved
+       Kerala, God's Own Country, and one of the most-loved
         tourist destinations in the country is planning to open itself to
         tourism in early October this year. The state has been shut for tourism
         ever since COVID-19 broke out in the country, eventually leading to
